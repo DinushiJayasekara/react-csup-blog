@@ -8,7 +8,7 @@ const Navbar = () => {
                 <span>CSUP Blog</span>
             </div>
             <div className="navbar-links">
-                <button>Add Blog</button>
+                <button>Add New Blog</button>
             </div>
         </header>
     );
