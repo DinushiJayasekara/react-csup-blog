@@ -1,0 +1,38 @@
+.navbar {
+  background: #e0f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin: 0;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 15%;
+}
+
+.navbar-logo span {
+  font-family: "Cabin Sketch", cursive;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-left: 0.2rem;
+  margin-top: 1rem;
+  color: #0c9f9d;
+}
+
+.navbar-links button {
+  font-family: "Lexend", sans-serif;
+  background: #0c9f9d;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
