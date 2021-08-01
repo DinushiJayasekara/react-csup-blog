@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/navbar/Navbar";
+import CreateBlog from "./pages/createBlog/CreateBlog";
 import Home from "./pages/home/Home";
 
 function App() {
@@ -68,7 +69,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Home blogList={blogList} />
+      <CreateBlog />
+      {/* <Home blogList={blogList} /> */}
     </div>
   );
 }
