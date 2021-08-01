@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import CreateBlog from "./pages/createBlog/CreateBlog";
 import Home from "./pages/home/Home";
@@ -68,9 +69,17 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <CreateBlog />
-      {/* <Home blogList={blogList} /> */}
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact>
+            <Home blogList={blogList} />
+          </Route>
+          <Route path="/create">
+            <CreateBlog />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

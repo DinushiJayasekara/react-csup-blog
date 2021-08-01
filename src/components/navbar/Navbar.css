@@ -7,6 +7,10 @@
   margin: 0;
 }
 
+.navbar a {
+  text-decoration: none;
+}
+
 .navbar-logo {
   display: flex;
   align-items: center;
