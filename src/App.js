@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import CreateBlog from "./pages/createBlog/CreateBlog";
 import Home from "./pages/home/Home";
 import React from "react";
+import Footer from "./components/footer/Footer";
 
 const name = 'Dinushi Jayasekara';
 
@@ -13,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-
         <User.Provider value={name}>
           <Navbar />
 
@@ -30,6 +30,8 @@ function App() {
               <BlogDetails />
             </Route>
           </Switch>
+
+          <Footer />
         </User.Provider>
 
       </Router>
