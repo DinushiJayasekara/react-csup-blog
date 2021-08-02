@@ -1,11 +1,21 @@
+import { useContext, useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import { User } from "../../App";
 import useFetch from "../../hooks/useFetch";
 import "./BlogDetails.css";
 
 const BlogDetails = () => {
 
     const { id, author } = useParams();
+
     const history = useHistory();
+    const user = useContext(User);
+
+    const [admin, setAdmin] = useState();
+
+    useEffect(() => {
+        setAdmin(user);
+    }, [user])
 
     const blogUrl = `https://jsonplaceholder.typicode.com/posts/${id}`;
     const { data: blog } = useFetch(blogUrl);
@@ -36,7 +46,7 @@ const BlogDetails = () => {
                     <div className="blog-details-author">
                         <span>By: {author}</span>
                     </div>
-                    <button className="blog-details-delete" onClick={handleClick}>Delete</button>
+                    {admin && <button className="blog-details-delete" onClick={handleClick}>Delete</button>}
                 </>
             }
         </div>
