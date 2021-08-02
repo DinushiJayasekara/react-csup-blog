@@ -1,13 +1,23 @@
-import { Link, useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import "./BlogDetails.css";
 
 const BlogDetails = () => {
 
     const { id } = useParams();
-    const { data: blog } = useFetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    const history = useHistory();
 
-    // http://names.drycodes.com/100?nameOptions=girl_names&separator=space
+    const blogUrl = `https://jsonplaceholder.typicode.com/posts/${id}`;
+    const { data: blog } = useFetch(blogUrl);
+
+    const handleClick = () => {
+        fetch(blogUrl, {
+            method: 'DELETE',
+        }).then(() => {
+            alert(`Blog deleted successfully.`);
+            history.push('/');
+        })
+    }
 
     return (
         <div className="blog-details">
@@ -25,9 +35,7 @@ const BlogDetails = () => {
                     <div className="blog-details-author">
                         <span>By: {blog.userId}</span>
                     </div>
-                    <Link to="/create">
-                        <button className="blog-details-delete">Delete</button>
-                    </Link>
+                    <button className="blog-details-delete" onClick={handleClick}>Delete</button>
                 </>
             }
         </div>

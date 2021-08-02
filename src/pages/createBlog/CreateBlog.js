@@ -22,6 +22,7 @@ const CreateBlog = () => {
         }).then((response) =>
             response.json()
         ).then((json) => {
+            alert(`Blog added successfully.`);
             history.push('/');
         })
     }
