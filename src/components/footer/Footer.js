@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
     return (
         <footer className="footer">
-            React Bootcamp 2021 CSUP Blog - J. K. D. R. Jayasekara
+            React Boot Camp 2021 CSUP Blog - J. K. D. R. Jayasekara
         </footer>
     );
 }
