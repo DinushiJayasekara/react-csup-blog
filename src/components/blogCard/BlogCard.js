@@ -4,7 +4,7 @@ import "./BlogCard.css";
 const BlogCard = (props) => {
     return (
         <div className="blog-card">
-            <Link to={`/blogs/${props.id}`}>
+            <Link to={`/blogs/${props.author}/${props.id}`}>
                 <div className="blog-card-image">
                     <img src={`https://source.unsplash.com/random/400x250?sig=${props.id}`} alt="" />
                 </div>

@@ -4,7 +4,7 @@ import "./BlogDetails.css";
 
 const BlogDetails = () => {
 
-    const { id } = useParams();
+    const { id, author } = useParams();
     const history = useHistory();
 
     const blogUrl = `https://jsonplaceholder.typicode.com/posts/${id}`;
@@ -30,10 +30,11 @@ const BlogDetails = () => {
                         <h2>{blog.title}</h2>
                     </div>
                     <div className="blog-details-body">
-                        <span>{blog.body}</span>
+                        <p>{blog.body}</p>
+                        <p>{blog.body}</p>
                     </div>
                     <div className="blog-details-author">
-                        <span>By: {blog.userId}</span>
+                        <span>By: {author}</span>
                     </div>
                     <button className="blog-details-delete" onClick={handleClick}>Delete</button>
                 </>
