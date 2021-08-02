@@ -7,6 +7,7 @@ const BlogDetails = () => {
     const { id } = useParams();
     const { data: blog } = useFetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
 
+    // http://names.drycodes.com/100?nameOptions=girl_names&separator=space
 
     return (
         <div className="blog-details">
@@ -22,7 +23,7 @@ const BlogDetails = () => {
                         <span>{blog.body}</span>
                     </div>
                     <div className="blog-details-author">
-                        <span>Written By User No: {blog.userId}</span>
+                        <span>By: {blog.userId}</span>
                     </div>
                     <Link to="/create">
                         <button className="blog-details-delete">Delete</button>

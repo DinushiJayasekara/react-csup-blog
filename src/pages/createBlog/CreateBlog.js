@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./CreateBlog.css";
 
 const CreateBlog = () => {
@@ -7,12 +8,22 @@ const CreateBlog = () => {
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('');
 
+    const history = useHistory();
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const newBlog = { title: title, body: body, author: author }
+        const newBlog = { title: title, userId: author, body: body }
 
-        console.log(newBlog);
+        fetch('https://jsonplaceholder.typicode.com/posts/', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(newBlog),
+        }).then((response) =>
+            response.json()
+        ).then((json) => {
+            history.push('/');
+        })
     }
 
     return (
