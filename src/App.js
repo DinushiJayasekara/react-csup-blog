@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import BlogDetails from "./components/blogDetails/BlogDetails";
+import BlogDetails from "./pages/blogDetails/BlogDetails";
 import Navbar from "./components/navbar/Navbar";
 import CreateBlog from "./pages/createBlog/CreateBlog";
 import Home from "./pages/home/Home";
