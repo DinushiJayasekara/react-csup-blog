@@ -1,5 +1,3 @@
-## React Boot Camp - CSUP Blog - J. K. D. R. Jayasekara
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
