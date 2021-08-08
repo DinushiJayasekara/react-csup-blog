@@ -1,4 +1,4 @@
-## React Boot Camp 2021 - CSUP Blog - J. K. D. R. Jayasekara
+## React Boot Camp - CSUP Blog - J. K. D. R. Jayasekara
 
 # Getting Started with Create React App
 
